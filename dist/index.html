@@ -14,15 +14,20 @@
     <div class="screen home">
       <div class="cover dim"></div>
       <header class="page-header">
-        <div class="d-flex justify-content-space-between">
-          <h1 class="big-shoulder text-light">Obetta Francis</h1>
-          <nav>
-            <ul class="menu">
-              <li class="menu-item"><a class="link" href="#headline">Home</a></li>
-              <li class="menu-item"><a class="link" href="#projects">Projects</a></li>
-              <li class="menu-item"><a class="link" href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+        <div id="page-header-slide" class="page-header-slide">
+          <div class="page-header-slide-bg"></div>
+          <div class="page-header-inner d-flex justify-content-space-between">
+            <button id="hamburger" class="hamburger"><span></span><span></span></button>
+            <h1 class="big-shoulder page-heading">Obetta Francis</h1>
+            <nav class="main-nav">
+              <ul id="drawer" class="menu">
+                <li class="menu-item"><a class="link" href="#">Home</a></li>
+                <li class="menu-item"><a class="link" href="#projects">Projects</a></li>
+                <li class="menu-item"><a class="link" href="#about">About</a></li>
+                <li class="menu-item"><a class="link" href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
       <section id="headline" class="headline content text-light">
@@ -62,6 +67,102 @@
         </div>
       </section>
     </div>
+    <main>
+      <div class="section-wrap projects-section-wrap">
+        <section id="projects" class="portfolio content">
+          <header class="portfolio-header">
+            <h2 class="heading h2 text-blue">My Recent Projects</h2>
+            <div class="hr flex-1"></div>
+          </header>
+          <div id="projects-container" class="projects-wrap"></div>
+        </section>
+      </div>
+      <div class="section-wrap about-section-wrap">
+        <section id="about" class="about content">
+          <div class="contained mb-30px">
+            <h2 class="h2 font-crete text-secondary">About me</h2>
+            <p class="about-text">
+              Hello I am a software developer. I can help you transform that wonderful idea into a product - be it Desktop, Mobile or Web application. If you liked what you saw on my portfolio, contact me, lets work together.
+            </p>
+            <a href="#" target="_blank" class="btn btn-secondary">Get My Resume</a>
+          </div>
+          <div class="stacks-and-skills">
+            <div class="group">
+              <div>
+                <span class="h3 group-header language">Languages</span>
+                <span class="item">Ruby</span>
+                <span class="item">JavaScript</span>
+                <span class="item">HTML</span>
+                <span class="item">CSS</span>
+                <span class="item">Java</span>
+                <span class="item">Kotlin</span>
+                <span class="item">C#</span>
+                <span class="item">PHP</span>
+              </div>
+            </div>
+            <div class="group">
+              <div>
+                <span class="h3 group-header framework">Frameworks</span>
+                <span class="item">Ruby On Rails</span>
+                <span class="item">CodeIgniter</span>
+                <span class="item">Bootstrap</span>
+                <span class="item">RSpec</span>
+                <span class="item">Capybara</span>
+                <span class="item">Selenium</span>
+              </div>
+            </div>
+            <div class="group">
+              <div>
+                <span class="h3 group-header skills">Skills</span>
+                <span class="item">Github</span>
+                <span class="item">Terminal</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="section-wrap contact-section-wrap">
+        <section id="contact" class="contact content">
+          <div class="contact-wrap d-flex">
+            <div class="contained text-blue contact-text">
+              We can work together to automate your current workflow or turn your that idea into a product. Please contact me.
+            </div>
+            <div class="contact-form-wrap flex-1">
+              <form method="POST" action="#">
+                <div class="d-flex mb-15px">
+                  <input type="text" name="firstname" class="mobile-input me-10px" placeholder="First Name">
+                  <input type="text" name="lastname" class="mobile-input" placeholder="Last Name">
+                </div>
+                <input type="email" name="email" class="mobile-input mb-15px" placeholder="Email Address">
+                <textarea name="message" placeholder="Say Hi ..." class="message"></textarea>
+                <div>
+                  <input type="submit" value="Get In Touch" class="btn btn-secondary pointer">
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-content">
+        <a class="contact-link" href="https://github.com/chasscepts">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="contact-link" href="https://linkedin/in/chasscepts">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="contact-link" href="https://angel.co/u/francis-obetta">
+          <i class="fab fa-angellist"></i>
+        </a>
+        <a class="contact-link" href="https://twitter.com/chasscepts">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="contact-link" href="mailto:francischassobetta@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
   </div>
   <script src="main.js"></script>
 </body>
