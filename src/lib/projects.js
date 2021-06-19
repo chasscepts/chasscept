@@ -52,6 +52,7 @@ const detailsPage = (() => {
     stacks.innerHTML = '';
     project.stacks.forEach((stack) => {
       const span = document.createElement('span');
+      span.classList.add('stack');
       span.textContent = stack;
       stacks.append(span);
     });

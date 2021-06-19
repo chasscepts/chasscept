@@ -4,6 +4,8 @@
 
 > My Personal Portfolio
 
+![screenshot](./screenshot.jpg)
+
 ## Built With
 
 - JavaScript
@@ -12,6 +14,8 @@
 - Webpack
 
 ## Live Demo
+
+[chasscept.netlify.app/](https://chasscept.netlify.app/)
 
 ## Instructions
 

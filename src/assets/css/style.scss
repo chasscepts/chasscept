@@ -209,6 +209,16 @@ hr {
   position: relative;
   height: 80px;
 
+  .hamburger {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+
+    @include media-break(md) {
+      display: none;
+    }
+  }
+
   .page-header-slide {
     position: fixed;
     top: 0;
@@ -239,11 +249,90 @@ hr {
       z-index: -1;
     }
 
+    .main-nav {
+      position: absolute;
+      background-color: transparent;
+      right: 0;
+      top: 80px;
+      width: 300px;
+      height: calc(100vh - 80px);
+      overflow-x: hidden;
+      pointer-events: none;
+
+      .menu {
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        background-color: #3c3a39;
+        transition: right 0.3s linear;
+        pointer-events: all;
+
+        &.open {
+          right: 0;
+        }
+
+        .menu-item {
+          padding: 30px 20px;
+
+          .link {
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              font-weight: 900;
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+
+      @include media-break(md) {
+        position: unset;
+        top: unset;
+        width: unset;
+        height: unset;
+        overflow-x: unset;
+
+        .menu {
+          position: unset;
+          display: flex;
+          right: unset;
+          background-color: unset;
+
+          &.open {
+            right: unset;
+          }
+
+          .menu-item {
+            padding: 0 15px;
+
+            .link {
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+
     &.bg-open {
       color: #333;
 
-      .link {
-        color: #fff;
+      .main-nav {
+        .menu {
+          .menu-item {
+            .link {
+              color: #fff;
+            }
+          }
+        }
       }
 
       .hamburger:not(.open) {
@@ -265,89 +354,6 @@ hr {
       @include media-break(md) {
         .link {
           color: #333;
-        }
-      }
-    }
-  }
-
-  .hamburger {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-
-    @include media-break(md) {
-      display: none;
-    }
-  }
-
-  .main-nav {
-    position: absolute;
-    background-color: transparent;
-    right: 0;
-    top: 80px;
-    width: 300px;
-    height: calc(100vh - 80px);
-    overflow-x: hidden;
-    pointer-events: none;
-
-    .menu {
-      position: absolute;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: -100%;
-      background-color: #3c3a39;
-      transition: right 0.3s linear;
-      pointer-events: all;
-
-      &.open {
-        right: 0;
-      }
-
-      .menu-item {
-        padding: 30px 20px;
-
-        .link {
-          font-weight: 500;
-          font-size: 18px;
-          display: block;
-          letter-spacing: 0.3px;
-          transition: all 0.3s ease-in-out;
-
-          &:hover {
-            font-weight: 900;
-            color: $color-secondary;
-          }
-        }
-      }
-    }
-
-    @include media-break(md) {
-      position: unset;
-      top: unset;
-      width: unset;
-      height: unset;
-      overflow-x: unset;
-
-      .menu {
-        position: unset;
-        display: flex;
-        right: unset;
-        background-color: unset;
-
-        &.open {
-          right: unset;
-        }
-
-        .menu-item {
-          padding: 0 15px;
-
-          .link {
-            width: 70px;
-          }
         }
       }
     }
@@ -719,7 +725,7 @@ hr {
     .stacks {
       margin-bottom: 20px;
 
-      span {
+      .stack {
         color: #333;
         font-size: 0.8rem;
         background-color: #fff;
@@ -728,7 +734,7 @@ hr {
     }
 
     .poster-desc-wrap {
-      max-width: 740px;;
+      max-width: 740px;
 
       @include media-break(md) {
         display: grid;
@@ -750,11 +756,6 @@ hr {
           padding-left: 15px;
           margin-top: 0;
         }
-
-        .btn {
-          padding-top: 5px;
-          padding-bottom: 5px;
-        }
       }
     }
 
@@ -771,6 +772,8 @@ hr {
     .details-links {
       .btn {
         margin-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
 
         &:last-child {
           margin-right: 0;
