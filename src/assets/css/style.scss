@@ -212,6 +212,7 @@ hr {
     position: absolute;
     right: 30px;
     top: 30px;
+    z-index: 2001;
 
     @include media-break(md) {
       display: none;
@@ -242,7 +243,7 @@ hr {
       left: 0;
       width: 100%;
       height: 0;
-      background-color: $color-light;
+      background-color: $color-light-blue;
       border-bottom: 1px solid $color-faint;
       transition: height 0.3s linear;
       z-index: -1;
@@ -252,9 +253,9 @@ hr {
       position: absolute;
       background-color: transparent;
       right: 0;
-      top: 80px;
+      top: 0;
       width: 300px;
-      height: calc(100vh - 80px);
+      height: 100vh;
       overflow-x: hidden;
       pointer-events: none;
 
@@ -263,11 +264,12 @@ hr {
         list-style: none;
         margin: 0;
         padding: 0;
+        padding-top: 79px;
         width: 100%;
         height: 100%;
         top: 0;
         right: -100%;
-        background-color: #3c3a39;
+        background-color: $color-light-blue;
         transition: right 0.3s linear;
         pointer-events: all;
 
@@ -278,10 +280,15 @@ hr {
         .menu-item {
           padding: 30px 20px;
 
+          &:first-child {
+            border-top: 1px solid $color-faint;
+          }
+
           .link {
             font-weight: 500;
             font-size: 18px;
             display: block;
+            color: #fff;
             letter-spacing: 0.3px;
             transition: all 0.3s ease-in-out;
 
@@ -304,6 +311,7 @@ hr {
           position: unset;
           display: flex;
           right: unset;
+          padding-top: unset;
           background-color: unset;
 
           &.open {
@@ -312,6 +320,10 @@ hr {
 
           .menu-item {
             padding: 0 15px;
+
+            &:first-child {
+              border-top: none;
+            }
 
             .link {
               width: 70px;
@@ -322,38 +334,12 @@ hr {
     }
 
     &.bg-open {
-      color: #333;
-
-      .main-nav {
-        .menu {
-          .menu-item {
-            .link {
-              color: #fff;
-            }
-          }
-        }
-      }
-
-      .hamburger:not(.open) {
-        span,
-        &::before,
-        &::after {
-          background-color: #333;
-        }
-      }
-
       .page-header-slide-bg {
         height: 80px;
       }
 
       .page-heading {
         color: $color-secondary;
-      }
-
-      @include media-break(md) {
-        .link {
-          color: #333;
-        }
       }
     }
   }
@@ -442,7 +428,7 @@ hr {
 
 .section-wrap {
   &.about-section-wrap {
-    background-color: #364e5d;
+    background-color: $color-light-blue;
     color: $color-light;
   }
 
