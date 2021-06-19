@@ -61,8 +61,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- hero sprite by [pondomaniac](https://opengameart.org/users/pondomaniac) lincesed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
-
 - computer-1.jpg by [Clément Hélardot](https://unsplash.com/@clemhlrdt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 - Microverse Community
