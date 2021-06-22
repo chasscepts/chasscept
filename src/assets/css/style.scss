@@ -191,6 +191,7 @@ hr {
     color: #fff;
     background-color: gray;
     line-height: 1;
+    border-radius: 2px;
 
     @include media-break(sm) {
       padding: 5px 12px;
@@ -222,19 +223,40 @@ hr {
   .page-header-slide {
     position: fixed;
     top: 0;
-    padding: 30px 50px;
+    padding: 20px 50px;
     transition: top 0.3s linear;
     width: 100%;
     color: $color-light;
     z-index: 2000;
 
+    .page-heading-wrap {
+      display: flex;
+      flex: 0;
+      align-items: center;
+
+      .picture-wrap {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        .picture {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+
     .page-heading {
       font-weight: 900;
       font-size: 28px;
+      white-space: nowrap;
     }
 
     .page-header-inner {
       z-index: 2000;
+      align-items: center;
     }
 
     .page-header-slide-bg {
@@ -361,7 +383,7 @@ hr {
 
   .headline-body {
     width: 100%;
-    max-width: 350px;
+    max-width: 370px;
     margin: auto;
     padding: 25px;
 
@@ -384,7 +406,7 @@ hr {
 
   .headline-heading {
     margin-bottom: 15px;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.1;
   }
 
@@ -514,6 +536,7 @@ hr {
 
 .about {
   padding: 40px;
+  font-size: 16px;
 
   .about-text {
     margin: 25px 0;
@@ -537,7 +560,8 @@ hr {
         position: relative;
         display: inline-block;
         padding-left: 24px;
-        margin: auto;
+        margin: 0 auto 20px;
+        font-size: 18px;
 
         &::before {
           content: '';
@@ -562,12 +586,11 @@ hr {
         }
 
         @include media-break(sm) {
-          margin: 0;
+          margin: 0 0 20px;
         }
       }
 
       .item {
-        font-size: 22px;
         line-height: 43px;
         display: block;
       }
