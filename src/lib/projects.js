@@ -78,7 +78,7 @@ const all = [
   new Project(
     'Marked Field',
     'A Markdown Editor. It uses Electron for graphical User Interface.',
-    'A Markdown Editor with a split view for editing the markdown and previewing the HTML. Changes to markdown are automatically reflected in a preview window. For parsing markdown, Marked Field uses Marked. It is a standalone application that uses Electron for the UI.',
+    'Markedfield is a Markdown Editor with a split view for editing the markdown and previewing the HTML. The preview automatically updates as the markdown changes. For parsing markdown, Marked Field uses <a href="https://github.com/markedjs/marked" target="_blank">Marked</a>. It is a standalone application that uses Electron for the UI.',
     marked,
     ['JavaScript', 'Electron', 'HTML'],
     [
@@ -88,7 +88,7 @@ const all = [
   new Project(
     'Handy Commands',
     'A Visual Studio Extension for organising frequently used command line commands.',
-    'A Visual Studio Code extension for organizing frequently run commands. Sometimes we forget that command we want to run, and we will leave our development environment to search for it. That is not productive. With Handy Commands, you organize them into groups of related commands and run them with the click of the mouse. If some part of the command changes from run to run, you can paste and edit it in the terminal. If you no longer frequently use a command, you can delete it. And by organizing them into groups, they will not clutter your workspace.',
+    'Handy Commands is a Visual Studio Code extension for organizing commands that we frequently run on the command line. Sometimes we forget that command we want to run, and we will leave our development environment to search for it. That is not productive. With Handy Commands, you organize them into groups of related commands and run them with the click of the mouse. If some part of the command changes from run to run, you can paste and edit it in the terminal. If you no longer frequently use a command, you can delete it. And by organizing them into groups, they will not clutter your workspace. From v0.0.2, Handy Commands automatically imports the scripts defined in package.json and puts them in their group (Npm Scripts). It watches changes to package.json and updates this group as the script changes.',
     handyCommands,
     ['TypeScript', 'VSCode API'],
     [
@@ -99,18 +99,18 @@ const all = [
   new Project(
     'Husler',
     'A game developed on the Phaser 3 Framework.',
-    "A game developed on the Phaser 3 framework. Our hero runs around, collecting gems before they and he run out of lives. A villain could be hidden in one of the gems, and there is no way to tell. If he collects the gold coin, he will become very rich. If he is caught by the villain or he collects the villain's assistance - hidden in a coin - he dies.",
+    'Husler is a game developed on the Phaser 3 framework. Our hero runs around, collecting Gems before they and he run out of lives. A villain could be hiding in any of the Gems, and there is no way to tell. If he collects the gold coin, he will become rich. But if the villain catches him, he dies.',
     husler,
     ['Phaser 3', 'JavaScript', 'Webpack'],
     [
-      { label: 'Github Repo', url: 'https://github.com/chasscepts/phaser-game' },
+      { label: 'Github Repo', url: 'https://github.com/chasscepts/husler' },
       { label: 'Live Demo', url: 'https://husler.netlify.app/' },
     ],
   ),
   new Project(
     'Flights',
     'A command-line utility written in Ruby to scrape the internet for the day or future flight deals.',
-    'A command-line utility written in Ruby to scrape the internet for the day or future flight deals.',
+    'Flights is a command-line utility application written in Ruby to scrape the internet for the day or future flight deals. It helps you avoid browsing countless websites for flight information by providing a simple command-line interface that will curate the best deals for you.',
     flights,
     ['Ruby'],
     [
@@ -120,7 +120,7 @@ const all = [
   new Project(
     'Chass Corner',
     'A Lifestyle Blog where we discuss Family, Sports, Entertainment and Politics.',
-    "A lifestyle blog where we discuss sports, politics, entertainment, family, and just about anything. You can contribute articles, read articles, and vote for your favorite articles. Just drop by 'The Corner' anytime, You will definitely find something there that will interest you.",
+    "Chass corner is a lifestyle blog where we discuss sports, politics, entertainment, family, and just about anything else. As a member of chass corner, You can contribute articles, read articles, and vote for your favorites. Just drop by 'The Corner' anytime, and You will find something there that will interest you.",
     chassCorner,
     ['Rails', 'JavaScript', 'SCSS'],
     [
@@ -131,7 +131,7 @@ const all = [
   new Project(
     'Weather App',
     'An App to retrieve and display weather information from the OpenWeatherMap API.',
-    "An App to retrieve and display weather information from the OpenWeatherMap API. Users' can choose to search for Weather information by providing the name of the city or clicking on a button to use the current city they are in. The background of the page changes to reflect the current weather information. It is designed to be simple and efficient.",
+    'Weather-app is an app to pull and display weather information from the OpenWeatherMap API. A user can search for Weather information by entering a city in the provided field. For quick searches, the App has a button that allows the user to search the information for the current city. The background of the page changes to reflect the current weather information. The design is simple and efficient.',
     weatherApp,
     ['JavaScript', 'Webpack', 'SCSS'],
     [
@@ -152,7 +152,7 @@ const getDOM = (project) => {
   link.innerHTML = `
     <article class="project-card">
       <img class="cover bg project-corner" src="${project.poster}" alt="${project.title}">
-      <div class="cover dim project-corner"></div>
+      <div class="cover dimmer project-corner"></div>
       <div class="z-normal">
         <header class="mb-15px">
           <h3>${project.title}</h3>
