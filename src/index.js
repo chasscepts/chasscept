@@ -1,5 +1,11 @@
 import './assets/css/style.scss';
+import picture from './assets/images/pic.jpg';
 import projects from './lib/projects';
+
+// Picture
+(() => {
+  document.querySelector('#picture').src = picture;
+})();
 
 // Projects
 (() => {
