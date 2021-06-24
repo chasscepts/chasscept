@@ -2,6 +2,8 @@
 @import './utility';
 @import './hamburger';
 
+$section-padding: 80px;
+
 body {
   &.details-mode {
     overflow: hidden;
@@ -59,6 +61,10 @@ hr {
 
 .mb-15px {
   margin-bottom: 15px;
+}
+
+.mb-25px {
+  margin-bottom: 25px;
 }
 
 .mt-5px {
@@ -165,7 +171,7 @@ hr {
   }
 
   &.btn-secondary {
-    background-color: $color-secondary;
+    background-color: $color-dark-orange;
     color: $color-light;
     border: 1px solid $color-secondary;
 
@@ -186,15 +192,15 @@ hr {
   flex-flow: row wrap;
 
   & > span {
-    padding: 3px 7px;
+    padding: 3px;
     margin: 2px;
     color: #fff;
-    background-color: gray;
+    background-color: $color-light-blue;
     line-height: 1;
     border-radius: 2px;
 
     @include media-break(sm) {
-      padding: 5px 12px;
+      padding: 5px;
     }
   }
 }
@@ -452,15 +458,24 @@ hr {
   &.about-section-wrap {
     background-color: $color-light-blue;
     color: $color-light;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
   }
 
   &.projects-section-wrap {
     background-image: url(../images/tile.jpg);
     background-repeat: repeat;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
   }
 
   &.contact-section-wrap {
-    background-color: #e6ebec;
+    /* background-color: #e6ebec;
+    background-image: url(../images/tile.jpg);
+    background-repeat: repeat; */
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    background-color: $color-lighter-blue;
 
     .mobile-input {
       border-bottom-color: #97a0a2;
@@ -539,7 +554,7 @@ hr {
   font-size: 16px;
 
   .about-text {
-    margin: 25px 0;
+    margin: 25px 0 40px;
     line-height: 24px;
   }
 
